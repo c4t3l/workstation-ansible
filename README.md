@@ -14,6 +14,11 @@ You must have the following installed to automate this playbook:
 
 You must provide your own image.  This repo supports qcow2 based images for use with the `kitchen-qemu` driver.
 
+Suggestions: 
+
+- kiwi
+- mkosi
+
 ### Runing kitchen
 
 The usual way: `kitchen test`
@@ -27,3 +32,5 @@ Setup: `kitchen converge`
 - https://github.com/esmil/kitchen-qemu/
 - https://docs.pytest.org/en/stable/
 - https://testinfra.readthedocs.io/en/latest/index.html
+- https://osinside.github.io/kiwi/
+- https://mkosi.systemd.io/
