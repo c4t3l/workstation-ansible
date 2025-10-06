@@ -1,0 +1,27 @@
+---
+driver:
+  name: qemu
+
+provisioner:
+  name: ansible_playbook
+  roles_path: roles
+  ansible_verbose: false
+  require_chef_for_busser: false
+  hosts: test-kitchen
+  playbook: main.yml
+
+platforms:
+  - name: c9
+    driver:
+      image:
+        - file: /var/lib/libvirt/images/centos9_nightly.qcow2
+
+suites:
+  - name: default
+
+verifier:
+  name: shell
+  command: >
+    py.test -vvvrxXs --color=yes
+    --hosts="paramiko://${KITCHEN_USERNAME}@${KITCHEN_HOSTNAME}:${KITCHEN_PORT}?ssh_identity_file=${KITCHEN_SSH_KEY}"
+    --sudo test/integration/${KITCHEN_SUITE}

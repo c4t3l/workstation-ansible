@@ -1,0 +1,7 @@
+---
+- name: Test Role
+  hosts: test-kitchen
+  become: true
+  roles:
+    - repos
+    - install

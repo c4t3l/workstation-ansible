@@ -1,0 +1,29 @@
+# Installs core workstation packages
+
+---
+- name: Install ruby modularity
+  ansible.builtin.dnf:
+    name: '@ruby:3.1'
+
+- name: Install core workstation packages
+  ansible.builtin.dnf:
+    name:
+      - adobe-source-code-pro-fonts
+      - copr-cli
+      - fedpkg
+      - gh
+      - git
+      - hplip
+      - irssi
+      - mkosi
+      - mock
+      - python3-pylint
+      - ripgrep
+      - rubygem-kitchen-ansible
+      - rubygem-kitchen-qemu
+      - rubygem-kitchen-salt
+      - rubygem-test-kitchen
+      - s3cmd
+      - stow
+      - yamllint
+      - zsh

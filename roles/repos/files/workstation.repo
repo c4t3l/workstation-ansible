@@ -1,0 +1,10 @@
+[copr:copr.fedorainfracloud.org:rcallicotte:test-kitchen]
+name=Copr repo for test-kitchen owned by rcallicotte
+baseurl=https://download.copr.fedorainfracloud.org/results/rcallicotte/test-kitchen/epel-9-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/rcallicotte/test-kitchen/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1

@@ -1,0 +1,10 @@
+# repos role
+# Adds required repositories for workstation
+
+---
+- name: deploy local configs
+  ansible.builtin.copy:
+    src: files/workstation.repo
+    dest: /etc/yum.repos.d/workstation.repo
+    owner: root
+    group: root
