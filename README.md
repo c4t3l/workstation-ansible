@@ -1,6 +1,6 @@
 # Workstation
 
-This is a playbook for setting up the workstation.
+This is a playbook for setting up a KDE workstation.
 
 ## Using kitchen-ci
 

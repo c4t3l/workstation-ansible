@@ -1,9 +1,10 @@
 ---
-- name: Test Role
+- name: Deploy KDE Workstation
   hosts: test-kitchen
   become: true
 
   pre_tasks:
+    # Add kdeconfig ansible module
     - name: Pre task setup
       ansible.builtin.dnf:
         name:
