@@ -16,6 +16,13 @@ platforms:
       image:
         - file: /var/lib/libvirt/images/centos9_nightly.qcow2
 
+  - name: f42
+    driver:
+      image:
+        - file: /var/lib/libvirt/images/EOG-Fedora.x86_64-42.qcow2
+      bios: /usr/share/edk2/ovmf/OVMF_CODE.fd
+      display: sdl
+
 suites:
   - name: default
 

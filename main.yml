@@ -2,6 +2,13 @@
 - name: Test Role
   hosts: test-kitchen
   become: true
+
+  pre_tasks:
+    - name: Pre task setup
+      ansible.builtin.dnf:
+        name:
+          - ansible-collection-community-general
+
   roles:
     - repos
     - install

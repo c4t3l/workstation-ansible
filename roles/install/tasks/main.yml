@@ -4,6 +4,7 @@
 - name: Install ruby modularity
   ansible.builtin.dnf:
     name: '@ruby:3.1'
+  when: ansible_facts['distribution'] != "Fedora"
 
 - name: Install core workstation packages
   ansible.builtin.dnf:
