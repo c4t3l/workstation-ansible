@@ -1,0 +1,10 @@
+# Configue desktop theme etc
+---
+
+- name: Deploy global theme
+  community.general.kdeconfig:
+    path: /usr/share/kde-settings/kde-profile/default/xdg/kdeglobals
+    values:
+      - group: KDE
+        key: LookAndFeelPackage
+        value: org.kde.breezedark.desktop

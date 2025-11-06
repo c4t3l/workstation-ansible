@@ -1,6 +1,7 @@
 ---
 driver:
   name: qemu
+  memory: 4096
 
 provisioner:
   name: ansible_playbook

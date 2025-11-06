@@ -13,3 +13,4 @@
   roles:
     - repos
     - install
+    - desktop
